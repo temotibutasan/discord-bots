@@ -1,0 +1,35 @@
+■開発環境
+npm init -y
+npm i discord.js --save
+npm install -g eslint
+
+■手順
+1.config.jsを作成
+{
+    "LISTENER": {
+        "CLIENT_ID": "ここにBOTのCLIENT_IDを記述",
+        "TOKEN": "ここにBOTのTOKENを記述"
+    },
+    "GUILD_ID": "ここにBOTを追加したサーバーのIDを記述"
+}
+
+2.index.jsを作成
+const { Client, Events, GatewayIntentBits } = require('discord.js');
+const { LISTENER } = require('./config.json');
+
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+
+client.once(Events.ClientReady, c => {
+    console.log(`Ready! Logged in as ${c.user.tag}`);
+});
+
+client.login(LISTENER.TOKEN);
+
+3.VSCodeでターミナルを開き、node index.jsを実行
+4.deployする
+　VSCodeでターミナルを開き、node deploy-commands.js
+
+※Discordのプライベートチャンネルではbotがコマンドを読み取ることが出来ないので、コマンドを実行しても反応しないです。
+※node index.jsを実行していないとアプリケーションが応答しませんでしたとなる
+
+
