@@ -1,0 +1,7 @@
+{
+    "LISTENER": {
+        "CLIENT_ID": "ここにBOTのCLIENT_IDを記述",
+        "TOKEN": "ここにBOTのTOKENを記述"
+    },
+    "GUILD_ID": "ここにBOTを追加したサーバーのIDを記述"
+}
