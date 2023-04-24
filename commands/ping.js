@@ -16,7 +16,7 @@ module.exports = {
 async function showModal(interaction)
 {
 	// Add components to modal
-	const modal = new ModalBuilder().setCustomId('myModal').setTitle('My Modal');
+	const modal = new ModalBuilder().setCustomId('mymodal').setTitle('My Modal');
 	// Create the text input components
 	const favoriteColorInput = new TextInputBuilder()
 		.setCustomId('favoriteColorInput')

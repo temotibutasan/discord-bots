@@ -3,9 +3,9 @@ const { SlashCommandBuilder,ActionRowBuilder, ModalBuilder,TextInputBuilder, Tex
 module.exports = {
 	data: new SlashCommandBuilder()
         // コマンドの名前
-		.setName('myModal')
+		.setName('mymodal')
         // コマンドの説明文
-		.setDescription('myModal情報確認'),
+		.setDescription('mymodal情報確認'),
 	async execute(interaction) {
 		// Get the data entered by the user
 		const favoriteColor = interaction.fields.getTextInputValue('favoriteColorInput');
